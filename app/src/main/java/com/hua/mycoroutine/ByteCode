@@ -1,0 +1,563 @@
+package com.hua.mycoroutine
+
+/**
+ * @author zhangsh
+ * @version V1.0
+ * @date 2020/4/15 2:17 PM
+ */
+
+// ================com/hua/mycoroutine/MyInterceptor.class =================
+// class version 50.0 (50)
+// access flags 0x31
+public final class com/hua/mycoroutine/MyInterceptor implements kotlin/coroutines/ContinuationInterceptor {
+
+
+    // access flags 0x1
+    // signature ()Lkotlin/coroutines/CoroutineContext$Key<*>;
+    // declaration: kotlin.coroutines.CoroutineContext$Key<?> getKey()
+    public getKey()Lkotlin/coroutines/CoroutineContext$Key;
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+    L0
+    LINENUMBER 27 L0
+    GETSTATIC kotlin/coroutines/ContinuationInterceptor.Key : Lkotlin/coroutines/ContinuationInterceptor$Key;
+    CHECKCAST kotlin/coroutines/CoroutineContext$Key
+    ARETURN
+    L1
+    LOCALVARIABLE this Lcom/hua/mycoroutine/MyInterceptor; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+    // access flags 0x1
+    // signature <T:Ljava/lang/Object;>(Lkotlin/coroutines/Continuation<-TT;>;)Lkotlin/coroutines/Continuation<TT;>;
+    // declaration: kotlin.coroutines.Continuation<T> interceptContinuation<T>(kotlin.coroutines.Continuation<? super T>)
+    public interceptContinuation(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    ALOAD 1
+    LDC "continuation"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    L1
+    LINENUMBER 30 L1
+    NEW com/hua/mycoroutine/MyContinuation
+            DUP
+    ALOAD 1
+    INVOKESPECIAL com/hua/mycoroutine/MyContinuation.<init> (Lkotlin/coroutines/Continuation;)V
+    CHECKCAST kotlin/coroutines/Continuation
+            ARETURN
+    L2
+    LOCALVARIABLE this Lcom/hua/mycoroutine/MyInterceptor; L0 L2 0
+    LOCALVARIABLE continuation Lkotlin/coroutines/Continuation; L0 L2 1
+    MAXSTACK = 3
+    MAXLOCALS = 2
+
+    // access flags 0x1
+    public <init>()V
+            L0
+    LINENUMBER 25 L0
+    ALOAD 0
+    INVOKESPECIAL java/lang/Object.<init> ()V
+            RETURN
+    L1
+    LOCALVARIABLE this Lcom/hua/mycoroutine/MyInterceptor; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+    // access flags 0x1
+    // signature <R:Ljava/lang/Object;>(TR;Lkotlin/jvm/functions/Function2<-TR;-Lkotlin/coroutines/CoroutineContext$Element;+TR;>;)TR;
+    // declaration: R fold<R>(R, kotlin.jvm.functions.Function2<? super R, ? super kotlin.coroutines.CoroutineContext$Element, ? extends R>)
+    public fold(Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    // annotable parameter count: 2 (visible)
+    // annotable parameter count: 2 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 1
+    L0
+    ALOAD 2
+    LDC "operation"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    L1
+    LINENUMBER 25 L1
+    ALOAD 0
+    ALOAD 1
+    ALOAD 2
+    INVOKESTATIC kotlin/coroutines/ContinuationInterceptor$DefaultImpls.fold (Lkotlin/coroutines/ContinuationInterceptor;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/Object;
+    ARETURN
+    L2
+    LOCALVARIABLE this Lkotlin/coroutines/CoroutineContext$Element; L0 L2 0
+    LOCALVARIABLE initial Ljava/lang/Object; L0 L2 1
+    LOCALVARIABLE operation Lkotlin/jvm/functions/Function2; L0 L2 2
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+    // access flags 0x1
+    // signature <E::Lkotlin/coroutines/CoroutineContext$Element;>(Lkotlin/coroutines/CoroutineContext$Key<TE;>;)TE;
+    // declaration: E get<E extends kotlin.coroutines.CoroutineContext$Element>(kotlin.coroutines.CoroutineContext$Key<E>)
+    public get(Lkotlin/coroutines/CoroutineContext$Key;)Lkotlin/coroutines/CoroutineContext$Element;
+    @Lorg/jetbrains/annotations/Nullable;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    ALOAD 1
+    LDC "key"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    L1
+    LINENUMBER 25 L1
+    ALOAD 0
+    ALOAD 1
+    INVOKESTATIC kotlin/coroutines/ContinuationInterceptor$DefaultImpls.get (Lkotlin/coroutines/ContinuationInterceptor;Lkotlin/coroutines/CoroutineContext$Key;)Lkotlin/coroutines/CoroutineContext$Element;
+    ARETURN
+    L2
+    LOCALVARIABLE this Lkotlin/coroutines/ContinuationInterceptor; L0 L2 0
+    LOCALVARIABLE key Lkotlin/coroutines/CoroutineContext$Key; L0 L2 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+    // access flags 0x1
+    // signature (Lkotlin/coroutines/CoroutineContext$Key<*>;)Lkotlin/coroutines/CoroutineContext;
+    // declaration: kotlin.coroutines.CoroutineContext minusKey(kotlin.coroutines.CoroutineContext$Key<?>)
+    public minusKey(Lkotlin/coroutines/CoroutineContext$Key;)Lkotlin/coroutines/CoroutineContext;
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    ALOAD 1
+    LDC "key"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    L1
+    LINENUMBER 25 L1
+    ALOAD 0
+    ALOAD 1
+    INVOKESTATIC kotlin/coroutines/ContinuationInterceptor$DefaultImpls.minusKey (Lkotlin/coroutines/ContinuationInterceptor;Lkotlin/coroutines/CoroutineContext$Key;)Lkotlin/coroutines/CoroutineContext;
+    ARETURN
+    L2
+    LOCALVARIABLE this Lkotlin/coroutines/ContinuationInterceptor; L0 L2 0
+    LOCALVARIABLE key Lkotlin/coroutines/CoroutineContext$Key; L0 L2 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+    // access flags 0x1
+    public plus(Lkotlin/coroutines/CoroutineContext;)Lkotlin/coroutines/CoroutineContext;
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    ALOAD 1
+    LDC "context"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    L1
+    LINENUMBER 25 L1
+    ALOAD 0
+    ALOAD 1
+    INVOKESTATIC kotlin/coroutines/ContinuationInterceptor$DefaultImpls.plus (Lkotlin/coroutines/ContinuationInterceptor;Lkotlin/coroutines/CoroutineContext;)Lkotlin/coroutines/CoroutineContext;
+    ARETURN
+    L2
+    LOCALVARIABLE this Lkotlin/coroutines/CoroutineContext; L0 L2 0
+    LOCALVARIABLE context Lkotlin/coroutines/CoroutineContext; L0 L2 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+    // access flags 0x1
+    // signature (Lkotlin/coroutines/Continuation<*>;)V
+    // declaration: void releaseInterceptedContinuation(kotlin.coroutines.Continuation<?>)
+    public releaseInterceptedContinuation(Lkotlin/coroutines/Continuation;)V
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    ALOAD 1
+    LDC "continuation"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    L1
+    LINENUMBER 25 L1
+    ALOAD 0
+    ALOAD 1
+    INVOKESTATIC kotlin/coroutines/ContinuationInterceptor$DefaultImpls.releaseInterceptedContinuation (Lkotlin/coroutines/ContinuationInterceptor;Lkotlin/coroutines/Continuation;)V
+    RETURN
+    L2
+    LOCALVARIABLE this Lkotlin/coroutines/ContinuationInterceptor; L0 L2 0
+    LOCALVARIABLE continuation Lkotlin/coroutines/Continuation; L0 L2 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+    @Lkotlin/Metadata;(mv={1, 1, 16}, bv={1, 0, 3}, k=1, d1={"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u00002\u00020\u0001B\u0005\u00a2\u0006\u0002\u0010\u0002J\"\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u0002H\u00090\u0008\"\u0004\u0008\u0000\u0010\u00092\u000c\u0010\n\u001a\u0008\u0012\u0004\u0012\u0002H\u00090\u0008H\u0016R\u0018\u0010\u0003\u001a\u0006\u0012\u0002\u0008\u00030\u00048VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u000b"}, d2={"Lcom/hua/mycoroutine/MyInterceptor;", "Lkotlin/coroutines/ContinuationInterceptor;", "()V", "key", "Lkotlin/coroutines/CoroutineContext$Key;", "getKey", "()Lkotlin/coroutines/CoroutineContext$Key;", "interceptContinuation", "Lkotlin/coroutines/Continuation;", "T", "continuation", "app"})
+    // compiled from: KotlinMain.kt
+}
+
+
+// ================com/hua/mycoroutine/MyContinuation.class =================
+// class version 50.0 (50)
+// access flags 0x31
+// signature <T:Ljava/lang/Object;>Ljava/lang/Object;Lkotlin/coroutines/Continuation<TT;>;
+// declaration: com/hua/mycoroutine/MyContinuation<T> implements kotlin.coroutines.Continuation<T>
+public final class com/hua/mycoroutine/MyContinuation implements kotlin/coroutines/Continuation {
+
+
+    // access flags 0x12
+    private final Lkotlin/coroutines/CoroutineContext; context
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+
+    // access flags 0x1
+    public getContext()Lkotlin/coroutines/CoroutineContext;
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+    L0
+    LINENUMBER 35 L0
+    ALOAD 0
+    GETFIELD com/hua/mycoroutine/MyContinuation.context : Lkotlin/coroutines/CoroutineContext;
+    ARETURN
+    L1
+    LOCALVARIABLE this Lcom/hua/mycoroutine/MyContinuation; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+    // access flags 0x1
+    public resumeWith(Ljava/lang/Object;)V
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    LINENUMBER 37 L0
+    LDC "\u62e6\u622a\u534f\u7a0bresume"
+    ASTORE 2
+    L1
+    ICONST_0
+    ISTORE 3
+    L2
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    ALOAD 2
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
+    L3
+    L4
+    LINENUMBER 38 L4
+    ALOAD 0
+    GETFIELD com/hua/mycoroutine/MyContinuation.continuation : Lkotlin/coroutines/Continuation;
+    ALOAD 1
+    INVOKEINTERFACE kotlin/coroutines/Continuation.resumeWith (Ljava/lang/Object;)V (itf)
+    L5
+    LINENUMBER 39 L5
+    RETURN
+    L6
+    LOCALVARIABLE this Lcom/hua/mycoroutine/MyContinuation; L0 L6 0
+    LOCALVARIABLE result Ljava/lang/Object; L0 L6 1
+    MAXSTACK = 2
+    MAXLOCALS = 4
+
+    // access flags 0x12
+    // signature Lkotlin/coroutines/Continuation<TT;>;
+    // declaration: continuation extends kotlin.coroutines.Continuation<T>
+    private final Lkotlin/coroutines/Continuation; continuation
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+
+    // access flags 0x11
+    // signature ()Lkotlin/coroutines/Continuation<TT;>;
+    // declaration: kotlin.coroutines.Continuation<T> getContinuation()
+    public final getContinuation()Lkotlin/coroutines/Continuation;
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+    L0
+    LINENUMBER 34 L0
+    ALOAD 0
+    GETFIELD com/hua/mycoroutine/MyContinuation.continuation : Lkotlin/coroutines/Continuation;
+    ARETURN
+    L1
+    LOCALVARIABLE this Lcom/hua/mycoroutine/MyContinuation; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+    // access flags 0x1
+    // signature (Lkotlin/coroutines/Continuation<-TT;>;)V
+    // declaration: void <init>(kotlin.coroutines.Continuation<? super T>)
+    public <init>(Lkotlin/coroutines/Continuation;)V
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    ALOAD 1
+    LDC "continuation"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    L1
+    LINENUMBER 34 L1
+    ALOAD 0
+    INVOKESPECIAL java/lang/Object.<init> ()V
+            ALOAD 0
+    ALOAD 1
+    PUTFIELD com/hua/mycoroutine/MyContinuation.continuation : Lkotlin/coroutines/Continuation;
+    L2
+    LINENUMBER 35 L2
+    ALOAD 0
+    ALOAD 0
+    GETFIELD com/hua/mycoroutine/MyContinuation.continuation : Lkotlin/coroutines/Continuation;
+    INVOKEINTERFACE kotlin/coroutines/Continuation.getContext ()Lkotlin/coroutines/CoroutineContext; (itf)
+    PUTFIELD com/hua/mycoroutine/MyContinuation.context : Lkotlin/coroutines/CoroutineContext;
+    RETURN
+    L3
+    LOCALVARIABLE this Lcom/hua/mycoroutine/MyContinuation; L0 L3 0
+    LOCALVARIABLE continuation Lkotlin/coroutines/Continuation; L0 L3 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+    @Lkotlin/Metadata;(mv={1, 1, 16}, bv={1, 0, 3}, k=1, d1={"\u0000$\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0018\u0000*\u0004\u0008\u0000\u0010\u00012\u0008\u0012\u0004\u0012\u0002H\u00010\u0002B\u0013\u0012\u000c\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0002\u00a2\u0006\u0002\u0010\u0004J\u001e\u0010\u000b\u001a\u00020\u000c2\u000c\u0010\r\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u000eH\u0016\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u000fR\u0014\u0010\u0005\u001a\u00020\u0006X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0007\u0010\u0008R\u0017\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0002\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0009\u0010\n\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006\u0010"}, d2={"Lcom/hua/mycoroutine/MyContinuation;", "T", "Lkotlin/coroutines/Continuation;", "continuation", "(Lkotlin/coroutines/Continuation;)V", "context", "Lkotlin/coroutines/CoroutineContext;", "getContext", "()Lkotlin/coroutines/CoroutineContext;", "getContinuation", "()Lkotlin/coroutines/Continuation;", "resumeWith", "", "result", "Lkotlin/Result;", "(Ljava/lang/Object;)V", "app"})
+    // compiled from: KotlinMain.kt
+    // debug info: SMAP
+    KotlinMain.kt
+    Kotlin
+    *S Kotlin
+    *F
+    + 1 KotlinMain.kt
+            com/hua/mycoroutine/MyContinuation
+    *L
+    1#1,40:1
+    *E
+
+}
+
+
+// ================com/hua/mycoroutine/KotlinMainKt.class =================
+// class version 50.0 (50)
+// access flags 0x31
+public final class com/hua/mycoroutine/KotlinMainKt {
+
+
+    // access flags 0x19
+    public final static main()V
+            @Lkotlinx/coroutines/InternalCoroutinesApi;() // invisible
+    L0
+    LINENUMBER 16 L0
+    GETSTATIC kotlinx/coroutines/GlobalScope.INSTANCE : Lkotlinx/coroutines/GlobalScope;
+    CHECKCAST kotlinx/coroutines/CoroutineScope
+            NEW com/hua/mycoroutine/MyInterceptor
+            DUP
+    INVOKESPECIAL com/hua/mycoroutine/MyInterceptor.<init> ()V
+            CHECKCAST kotlin/coroutines/CoroutineContext
+            ACONST_NULL
+    NEW com/hua/mycoroutine/KotlinMainKt$main$1
+    DUP
+    ACONST_NULL
+    INVOKESPECIAL com/hua/mycoroutine/KotlinMainKt$main$1.<init> (Lkotlin/coroutines/Continuation;)V
+    CHECKCAST kotlin/jvm/functions/Function2
+            ICONST_2
+    ACONST_NULL
+    INVOKESTATIC kotlinx/coroutines/BuildersKt.launch$default (Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+    POP
+    L1
+    LINENUMBER 21 L1
+    LDC 9223372036854775807
+    INVOKESTATIC java/lang/Thread.sleep (J)V
+            L2
+    LINENUMBER 23 L2
+    RETURN
+    L3
+    MAXSTACK = 6
+    MAXLOCALS = 0
+
+    // access flags 0x1009
+    public static synthetic main([Ljava/lang/String;)V
+    INVOKESTATIC com/hua/mycoroutine/KotlinMainKt.main ()V
+            RETURN
+    MAXSTACK = 0
+    MAXLOCALS = 1
+
+    @Lkotlin/Metadata;(mv={1, 1, 16}, bv={1, 0, 3}, k=2, d1={"\u0000\u0008\n\u0000\n\u0002\u0010\u0002\n\u0000\u001a\u0008\u0010\u0000\u001a\u00020\u0001H\u0007\u00a8\u0006\u0002"}, d2={"main", "", "app"})
+    // access flags 0x18
+    final static INNERCLASS com/hua/mycoroutine/KotlinMainKt$main$1 null null
+    // compiled from: KotlinMain.kt
+}
+
+
+// ================com/hua/mycoroutine/KotlinMainKt$main$1.class =================
+// class version 50.0 (50)
+// access flags 0x30
+// signature Lkotlin/coroutines/jvm/internal/SuspendLambda;Lkotlin/jvm/functions/Function2<Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;Ljava/lang/Object;>;
+// declaration: com/hua/mycoroutine/KotlinMainKt$main$1 extends kotlin.coroutines.jvm.internal.SuspendLambda implements kotlin.jvm.functions.Function2<kotlinx.coroutines.CoroutineScope, kotlin.coroutines.Continuation<? super kotlin.Unit>, java.lang.Object>
+final class com/hua/mycoroutine/KotlinMainKt$main$1 extends kotlin/coroutines/jvm/internal/SuspendLambda implements kotlin/jvm/functions/Function2 {
+
+
+    // access flags 0x2
+    private Lkotlinx/coroutines/CoroutineScope; p$
+
+    // access flags 0x11
+    public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    @Lorg/jetbrains/annotations/Nullable;() // invisible
+    // annotable parameter count: 1 (visible)
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+    L0
+    INVOKESTATIC kotlin/coroutines/intrinsics/IntrinsicsKt.getCOROUTINE_SUSPENDED ()Ljava/lang/Object;
+    L1
+    LINENUMBER 16 L1
+    ASTORE 5
+    ALOAD 0
+    GETFIELD com/hua/mycoroutine/KotlinMainKt$main$1.label : I
+    TABLESWITCH
+    0: L2
+    1: L3
+    default: L4
+    L2
+    ALOAD 1
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    L5
+    ALOAD 0
+    GETFIELD com/hua/mycoroutine/KotlinMainKt$main$1.p$ : Lkotlinx/coroutines/CoroutineScope;
+    ASTORE 2
+    L6
+    LINENUMBER 17 L6
+    LDC "1"
+    ASTORE 3
+    L7
+    ICONST_0
+    ISTORE 4
+    L8
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    ALOAD 3
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
+    L9
+    L10
+    LINENUMBER 18 L10
+    LDC 100
+    ALOAD 0
+    ALOAD 0
+    ALOAD 2
+    PUTFIELD com/hua/mycoroutine/KotlinMainKt$main$1.L$0 : Ljava/lang/Object;
+    ALOAD 0
+    ICONST_1
+    PUTFIELD com/hua/mycoroutine/KotlinMainKt$main$1.label : I
+    INVOKESTATIC kotlinx/coroutines/DelayKt.delay (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    L11
+    DUP
+    ALOAD 5
+    IF_ACMPNE L12
+            L13
+    LINENUMBER 16 L13
+    ALOAD 5
+    ARETURN
+    L3
+    ALOAD 0
+    GETFIELD com/hua/mycoroutine/KotlinMainKt$main$1.L$0 : Ljava/lang/Object;
+    CHECKCAST kotlinx/coroutines/CoroutineScope
+            ASTORE 2
+    L14
+    ALOAD 1
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    ALOAD 1
+    L12
+    LINENUMBER 19 L12
+    POP
+    L15
+    LDC "3"
+    ASTORE 3
+    L16
+    ICONST_0
+    ISTORE 4
+    L17
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    ALOAD 3
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
+    L18
+    L19
+    LINENUMBER 20 L19
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    ARETURN
+    L4
+    NEW java/lang/IllegalStateException
+            DUP
+    LDC "call to 'resume' before 'invoke' with coroutine"
+    INVOKESPECIAL java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
+    ATHROW
+    L20
+    LOCALVARIABLE $this$launch Lkotlinx/coroutines/CoroutineScope; L6 L4 2
+    LOCALVARIABLE this Lcom/hua/mycoroutine/KotlinMainKt$main$1; L0 L20 0
+    LOCALVARIABLE $result Ljava/lang/Object; L0 L20 1
+    MAXSTACK = 5
+    MAXLOCALS = 6
+
+    // access flags 0x0
+    Ljava/lang/Object; L$0
+
+    @Lkotlin/coroutines/jvm/internal/DebugMetadata;(f="KotlinMain.kt", l={18}, i={0}, s={"L$0"}, n={"$this$launch"}, m="invokeSuspend", c="com.hua.mycoroutine.KotlinMainKt$main$1")
+
+    // access flags 0x0
+    <init>(Lkotlin/coroutines/Continuation;)V
+    ALOAD 0
+    ICONST_2
+    ALOAD 1
+    INVOKESPECIAL kotlin/coroutines/jvm/internal/SuspendLambda.<init> (ILkotlin/coroutines/Continuation;)V
+    RETURN
+    MAXSTACK = 3
+    MAXLOCALS = 2
+
+    // access flags 0x0
+    I label
+
+// access flags 0x11
+// signature (Ljava/lang/Object;Lkotlin/coroutines/Continuation<*>;)Lkotlin/coroutines/Continuation<Lkotlin/Unit;>;
+// declaration: kotlin.coroutines.Continuation<kotlin.Unit> create(java.lang.Object, kotlin.coroutines.Continuation<?>)
+public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    @Lorg/jetbrains/annotations/NotNull;() // invisible
+    // annotable parameter count: 2 (visible)
+    // annotable parameter count: 2 (invisible)
+    @Lorg/jetbrains/annotations/Nullable;() // invisible, parameter 0
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 1
+    L0
+    ALOAD 2
+    LDC "completion"
+    INVOKESTATIC kotlin/jvm/internal/Intrinsics.checkParameterIsNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+    NEW com/hua/mycoroutine/KotlinMainKt$main$1
+    DUP
+    ALOAD 2
+    INVOKESPECIAL com/hua/mycoroutine/KotlinMainKt$main$1.<init> (Lkotlin/coroutines/Continuation;)V
+    ASTORE 3
+    ALOAD 1
+    CHECKCAST kotlinx/coroutines/CoroutineScope
+    ALOAD 3
+    ALOAD 1
+    CHECKCAST kotlinx/coroutines/CoroutineScope
+    PUTFIELD com/hua/mycoroutine/KotlinMainKt$main$1.p$ : Lkotlinx/coroutines/CoroutineScope;
+    ALOAD 3
+    ARETURN
+    L1
+    LOCALVARIABLE this Lkotlin/coroutines/jvm/internal/BaseContinuationImpl; L0 L1 0
+    LOCALVARIABLE value Ljava/lang/Object; L0 L1 1
+    LOCALVARIABLE completion Lkotlin/coroutines/Continuation; L0 L1 2
+    MAXSTACK = 3
+    MAXLOCALS = 4
+
+// access flags 0x11
+public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    ALOAD 0
+    ALOAD 1
+    ALOAD 2
+    CHECKCAST kotlin/coroutines/Continuation
+            INVOKEVIRTUAL com/hua/mycoroutine/KotlinMainKt$main$1.create (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    CHECKCAST com/hua/mycoroutine/KotlinMainKt$main$1
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    INVOKEVIRTUAL com/hua/mycoroutine/KotlinMainKt$main$1.invokeSuspend (Ljava/lang/Object;)Ljava/lang/Object;
+    ARETURN
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+    @Lkotlin/Metadata;(mv={1, 1, 16}, bv={1, 0, 3}, k=3, d1={"\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u008a@\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"}, d2={"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;", "invoke", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"})
+    OUTERCLASS com/hua/mycoroutine/KotlinMainKt main ()V
+            // access flags 0x18
+            final static INNERCLASS com/hua/mycoroutine/KotlinMainKt$main$1 null null
+    // compiled from: KotlinMain.kt
+    // debug info: SMAP
+    KotlinMain.kt
+    Kotlin
+    *S Kotlin
+    *F
+    + 1 KotlinMain.kt
+            com/hua/mycoroutine/KotlinMainKt$main$1
+    *L
+    1#1,40:1
+    *E
+
+}
+
+
+// ================META-INF/app.kotlin_module =================
+            
+#
+com.hua.mycoroutineKotlinMainKt
+
